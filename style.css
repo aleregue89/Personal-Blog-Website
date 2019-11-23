@@ -1,0 +1,68 @@
+h1 {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid yellow;
+    color: rgb(24, 23, 20);
+    text-align: center;
+    /* I have to add a different font */
+}
+
+.container {
+/* Set display to grid */
+display:grid;
+/* setup rows amd columns */
+   grid-template-columns: repeat(8, 1fr);
+   grid-template-rows: 150px 400px;
+   grid-template-areas: 
+   "hd hd hd hd hd hd hd hd"
+   "p p p main main main main main"
+   "ft ft ft ft ft ft ft ft";
+   border: 2px solid yellow;
+
+}
+
+#nestedgrid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    border: 3px solid white;
+    background-color: yellow;
+}
+
+.photobox{
+    width: 520px;
+    height: 370px;
+    border: 1px solid red;
+}
+
+#one{
+    background-image: url("Images\IMG_1925.jpg");
+    background-size: contain;
+}
+
+body {
+    background-color: rgb(143, 152, 161);
+}
+
+.box{
+    border: 1px solid red;
+    background: #F8FA9D;
+}
+
+
+.header{
+    grid-area: hd;
+}
+
+.picture{
+    grid-area: p;
+    image-orientation: inherit;
+}
+
+.content{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: ft;
+}
